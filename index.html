@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+		<title>Vue.js</title>
+		<link href="style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		
+	</head>
+<body>
+	<div id="app">
+		<input type="text" v-on:input="changeTitle">
+		<p>{{ title }}</p>
+	</div>
+
+	<script src="https://unpkg.com/vue@2.3.4"></script>
+	<script src="main.js"></script>
+</body>
