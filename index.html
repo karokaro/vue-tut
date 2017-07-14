@@ -7,18 +7,17 @@
 		
 	</head>
 <body>
-	<!-- <div id="app">
+	<div id="app">
 		<h1 v-once>{{ title }}</h1>
 		<p>{{ sayHello() }} - <a v-bind:href="link" target="_blank" >Google</a></p>
-		<hr>
 		<p v-html="finishedLink"></p>
-	</div> -->
-
+	</div>
+	<hr>
 	<div id="exercise">
 	   <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
 	    <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
 	    <!-- 2) Output your age, multiplied by 3 -->
-	    <p> {{ multipleAge() }} <!-- and {‌{ age * 3 }} --></p>
+	    <p> {{ multipleAge() }} <!-- or {{ age*3 }} --></p>
 	    <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
 	    <p v-once>Output: {{ random() }}</p>
 	    <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
@@ -29,6 +28,16 @@
 	    <div>
 	        <input type="text" v-bind:value="name">
 	    </div>
+	</div>
+	<hr>
+	<div id="listeningEvents">
+		<button v-on:click="increase(2, $event)">Click me</button>
+		<p>How many times the button is clicked: {{ counter }}</p>
+		<p v-on:mousemove="updateCoordinates">
+			Coordinates: {{ x }} / {{ y }}
+			- <span v-on:mousemove.stop="">DEAD SPOT</span>
+		</p>
+		<input type="text" v-on:keyup.enter="alertMe">
 	</div>
 
 	<script src="https://unpkg.com/vue@2.3.4"></script>
