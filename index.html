@@ -8,8 +8,11 @@
 	</head>
 <body>
 	<div id="app">
-	    <input type="text" v-model="name">
-	    <p>{{name}}</p>
+	    <button v-on:click="counter++">Increase</button>
+	    <button v-on:click="counter--">Decrease</button>
+	    <button v-on:click="secondCounter++">increase second</button>
+	    <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+	    <p>Result: {{ result() }} | {{ output }}</p>
 	</div>
 
 	<script src="https://unpkg.com/vue@2.3.4"></script>
