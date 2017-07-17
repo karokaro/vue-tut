@@ -7,19 +7,20 @@
 		
 	</head>
 <body>
-	<div id="exercise3">
-	    <!-- 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it -->
-	    <div>
-	        <p>Current Value: {{ value }}</p>
-	        <button @click="value += 5">Add 5</button>
-	        <button @click="value += 1">Add 1</button>
-	        <p>{{ result }}</p>
-	    </div>
-	    <!-- 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
-	    <div>
-	        <input type="text" v-model="value">
-	        <p>{{ value }}</p>
-	    </div>
+	<div id="app">
+	    <!-- <div class="demo"
+	    @click="attachRed = !attachRed"
+	    :class="divClass"></div>
+	    <div class="demo" :class="{red: attachRed}"></div>
+	    <div class="demo" :class="[color, {red: attachRed}]"></div>
+	    <hr>
+	    <input type="text" v-model="color"> -->
+	    <div class="demo" :style="{backgroundColor: color}"></div> <!-- 'background-color': color -->
+	    <div class="demo" :style="myStyle"></div>
+	    <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+	    <hr>
+	    <input type="text" v-model="color">
+	    <input type="text" v-model="width">
 	</div>
 
 	<script src="https://unpkg.com/vue@2.3.4"></script>

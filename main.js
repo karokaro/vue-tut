@@ -1,19 +1,30 @@
+// new Vue({
+// 	el: '#app',
+// 	data: {
+// 		attachRed: false,
+// 		color: 'green'
+// 	},
+// 	computed: {
+// 		divClass: function() {
+// 			return {
+// 				red: this.attachRed,
+// 				blue: !this.attachRed
+// 			};
+// 		}
+// 	}
+// });
 new Vue({
-	el: '#exercise3',
+	el: '#app',
 	data: {
-		value: 0
+		color: 'gray',
+		width: 100
 	},
 	computed: {
-		result: function() {
-			return this.value >= 37 ? 'done' : 'not there yet';
-		}
-	},
-	watch: {
-		result: function() {
-			var vm = this;
-			setTimeout(function() {
-				vm.value = 0;
-			}, 5000);
+		myStyle: function() {
+			return {
+				backgroundColor: this.color,
+				width: this.width + 'px'
+			};
 		}
 	}
 });
