@@ -4,7 +4,6 @@ var data = {
 }
 
 var vm1 = new Vue({
-  el: '#app',
   data: data,
   methods: {
     show: function() {
@@ -29,6 +28,8 @@ var vm1 = new Vue({
   }
 });
 
+vm1.$mount('#app');
+
 setTimeout(function() {
 	vm1.title = 'Changed by timer yeah!';
 	vm1.show();
@@ -49,3 +50,11 @@ var vm2 = new Vue({
   	}
   }
 });
+
+var vm3 = new Vue({
+	template: '<h1>Heeelllooooo!</h1>'
+});
+
+//vm3.$mount('app3');
+vm3.$mount();
+document.getElementById('app3').appendChild(vm3.$el);
