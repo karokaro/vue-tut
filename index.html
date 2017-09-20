@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-		<title>Vue.js</title>
-		<link href="style.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		
-	</head>
-<body>
-	<div id="app">
-		<h1>{{ title }}</h1>
-		<button @click="title = 'Changed!'">Update Title</button>
-		<button @click="destroy">Destroy</button>
-	</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-cli</title>
+  </head>
+  <body>
+    <div id="app">
+      <my-comp></my-comp>
+      <hr>
+      <my-comp></my-comp>
+    </div>
+   
 
-	<script src="https://unpkg.com/vue@2.3.4"></script>
+    <script src="https://unpkg.com/vue@2.3.4"></script>
 	<script src="main.js"></script>
-</body>
+   
+  </body>
+</html>
