@@ -1,8 +1,8 @@
-var data = { status: 'Critical'};
-
-Vue.component('my-comp', {
+var comp = {
 	data: function() {
-  	return data;
+  	return {
+  		status: 'Critical'
+  	}
   },
   template: '<p>Server Status: {{status}} (<button @click="changeStatus">Change</button>)</p>',
   methods: {
@@ -10,8 +10,15 @@ Vue.component('my-comp', {
   		this.status = 'Normal';
   	}
   }
+};
+
+new Vue({
+  el: '#app',
+  components: {
+  	'my-comp': comp
+  }
 });
 
 new Vue({
-  el: '#app'
+  el: '#app2'
 });
