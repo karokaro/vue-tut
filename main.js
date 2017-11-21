@@ -1,3 +1,4 @@
+// Vue.component('my-copm', {});
 var comp = {
 	data: function() {
   	return {
